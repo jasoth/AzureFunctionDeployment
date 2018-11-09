@@ -45,7 +45,7 @@
         },
         "githubRepoURL": {
             "type": "string",
-            "defaultValue": "https://github.com/microsoft/AzureFunctionForSplunkVS.git"
+            "defaultValue": "https://github.com/jasoth/AzureFunctionForSplunkVS.git"
         },
         "githubRepoBranch": {
             "type": "string",
@@ -54,6 +54,10 @@
         "eventHubConnectionString": {
             "type": "string",
             "defaultValue": "Endpoint=sb://YOURNAMESPACE.servicebus.windows.net/;SharedAccessKeyName=YOURPOLICYNAME;SharedAccessKey=YOURPOLICYKEY"
+        },
+        "eventHubConsumerGroup": {
+            "type": "string",
+            "defaultValue": "$Default"
         },
         "inputHubNameActivityLogs": {
             "type": "string",
@@ -74,6 +78,18 @@
         "inputHubNameLAD": {
             "type": "string",
             "defaultValue": "insights-telemetry-lad"
+        },
+        "inputHubNameAuditLogs": {
+            "type": "string",
+            "defaultValue": "insights-logs-auditlogs"
+        },
+        "inputHubNameSignInLogs": {
+            "type": "string",
+            "defaultValue": "insights-logs-signinlogs"
+        },
+        "inputHubNameSecGraphAlerts": {
+            "type": "string",
+            "defaultValue": "insights-logs-alert"
         },
         "splunkToken": {
             "type": "string"
@@ -183,6 +199,10 @@
                             "value": "[parameters('eventHubConnectionString')]"
                         },
                         {
+                            "name": "hubConsumerGroup",
+                            "value": "[parameters('eventHubConsumerGroup')]"
+                        },
+                        {
                             "name": "input-hub-name-activity-logs",
                             "value": "[parameters('inputHubNameActivityLogs')]"
                         },
@@ -201,6 +221,18 @@
                         {
                             "name": "input-hub-name-lad",
                             "value": "[parameters('inputHubNameLAD')]"
+                        },
+                        {
+                            "name": "input-hub-name-aadaudit-logs",
+                            "value": "[parameters('inputHubNameAuditLogs')]"
+                        },
+                        {
+                            "name": "input-hub-name-aadsignin-logs",
+                            "value": "[parameters('inputHubNameSignInLogs')]"
+                        },
+                        {
+                            "name": "input-hub-name-secgraph-alerts",
+                            "value": "[parameters('inputHubNameSecGraphAlerts')]"
                         },
                         {
                             "name": "splunkToken",

@@ -41,6 +41,18 @@
         "inputHubNameLAD": {
             "value": "insights-telemetry-lad"
         },
+        "inputHubNameAuditLogs": {
+            "type": "string",
+            "defaultValue": "insights-logs-auditlogs"
+        },
+        "inputHubNameSignInLogs": {
+            "type": "string",
+            "defaultValue": "insights-logs-signinlogs"
+        },
+        "inputHubNameSecGraphAlerts": {
+            "type": "string",
+            "defaultValue": "insights-logs-alert"
+        },
         "splunkToken": {
             "value": "4BC788E0-YOUR-GUID-HERE-733EBC656112"
         },

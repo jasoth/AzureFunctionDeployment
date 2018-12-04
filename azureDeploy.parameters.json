@@ -23,6 +23,9 @@
         "eventHubConnectionString": {
             "value": "Endpoint=sb://YourServiceBusNamespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=gobbledegook"
         },
+        "eventHubConsumerGroup": {
+            "value": "$Default"
+        },
         "inputHubNameActivityLogs": {
             "value": "insights-operational-logs"
         },
